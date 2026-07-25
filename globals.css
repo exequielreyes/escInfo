@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink-900 font-body;
+}
+
+::selection {
+  @apply bg-teal-100 text-ink-900;
+}
+
+:focus-visible {
+  outline: 2px solid #1c8c7d;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  @apply font-mono text-xs uppercase tracking-[0.18em] text-teal-600;
+}
+
+.prose-custom p + p {
+  margin-top: 0.9em;
+}
+
+.input {
+  @apply w-full rounded border border-slate-200 px-3 py-2 text-sm text-ink-900;
+}
+.input:focus {
+  @apply border-teal-600 outline-none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
